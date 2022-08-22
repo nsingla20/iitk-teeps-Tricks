@@ -31,10 +31,8 @@ def Th100(server,x,host):
     ans.sort()
     return ans
 
-def go(x,i,j):  #x=0,cse ; x=1,cc ; from i to j;
-    server="csews" if x==0 else "ccpc"
-    host=".cse.iitk.ac.in" if x==0 else ".cc.iitk.ac.in"
-    print("\nOnline "+("csews" if x==0 else "ccpc")+" pcs are:")
+def go(server,host,i,j):  #x=0,cse ; x=1,cc ; from i to j;
+    print("\nOnline "+server+" pcs are:")
     ans=[]
     for e in range(i,j+1):
         ans=ans+Th100(server,e,host)
@@ -43,5 +41,6 @@ def go(x,i,j):  #x=0,cse ; x=1,cc ; from i to j;
         print(server+str(e)+", ",end="")
     print("")
 
-go(0,0,3)
-go(1,0,3)
+go('csews','.cse.iitk.ac.in',0,3)
+go('ccpc','.cc.iitk.ac.in',0,3)
+go('escpc','.cc.iitk.ac.in',0,3)
