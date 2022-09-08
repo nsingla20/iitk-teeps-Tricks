@@ -13,7 +13,7 @@ def ping(server,x,host,ans):
     param = '-n' if platform.system().lower()=='windows' else '-c'
 
     # Building the command. Ex: "ping -c 1 google.com"
-    command = ['ping', param, '1','-W 1', loc]
+    command = ['ping', param,'1', loc]
 
     if subprocess.call(command,stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL) == 0:
         ans.append(x)
