@@ -16,11 +16,13 @@ with urlopen(file) as f:
 file=input("File to see : ")
 pre="http://home.iitk.ac.in/~"
 post="/cs300/"+file
+i=1
 for student in students:
     try:
         r = urlopen(pre+student+post)
     except Exception as e:
         continue
     else:
-        print(student)
+        print(str(i)+"\t: "+student)
+        i+=1
 
