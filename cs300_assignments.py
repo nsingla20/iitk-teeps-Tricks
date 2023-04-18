@@ -12,7 +12,7 @@ with urlopen(file) as f:
     for row in rows:
         if(row[1]!=""):
             students.append(row[1])
-
+print("Total students in course : "+str(len(students)))
 file=input("File to see : ")
 pre="http://home.iitk.ac.in/~"
 post="/cs300/"+file
